@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Create a todo
+  form(action='/api/todos' method='post')
+    div
+      label(for='title') Title:
+      input(id='title' name='title')
+    div
+      label(for='body') Body:
+      textarea(id='body' name='body' rows='4' cols='50')
+    div
+      button(type='reset' onclick='window.location.href="/todos"') Cancel
+      input(type='submit' value='Create')
